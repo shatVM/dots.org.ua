@@ -1,0 +1,25 @@
+{
+  "name": "DOTS",
+  "version": "1.0.2",
+  "manifest_version": 3,
+  "description": "Вибір мови програмування",
+  "icons": {
+    "16": "icons/icon16.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [{
+    "matches": ["https://qbit.dots.org.ua/solutions?new=1&id=*"],
+    "js": ["solutions.js"]
+  }, {
+    "matches": ["https://qbit.dots.org.ua/contests?new=1"],
+    "js": ["contests.js"]
+  },{
+    "matches": ["https://qbit.dots.org.ua/*"],
+    "js": ["style.js"]
+  }
+],  
+"host_permissions": [
+  "https://qbit.dots.org.ua/*"
+]
+
+}
